@@ -10,6 +10,7 @@ import { Books } from "./pages/books";
 import AddBook from "./pages/addbook"; 
 import EditBook from "./pages/editbook";
 import injectContext from "./store/appContext";
+import SignupCritico from "./pages/signupCritico";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -30,9 +31,6 @@ const Layout = () => {
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<Demo />} path="/demo" />
-                        <Route element={<Books />} path="/books" />
-                        <Route element={<AddBook />} path="/addbook" />
-                        <Route element={<EditBook />} path="/editbook/:id" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>

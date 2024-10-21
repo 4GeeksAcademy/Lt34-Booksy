@@ -40,7 +40,7 @@ def add_critico():
     if not body:
         return jsonify({"msg": "No se proporcionó información"}), 400
 
-    required_fields = ['nombre', 'apellido', 'genero', 'acerca_de_mi', 'email', 'password', 'is_active']
+    required_fields = ['nombre', 'apellido', 'genero', 'acerca_de_mi', 'email', 'password']
     missing_fields = [field for field in required_fields if field not in body]
     if missing_fields:
         return jsonify({"msg": f"Faltan los siguientes campos: {', '.join(missing_fields)}"}), 400
@@ -52,7 +52,7 @@ def add_critico():
         acerca_de_mi=body['acerca_de_mi'],
         email=body['email'],
         password=body['password'], 
-        is_active=body['is_active']
+        
     )
 
     try:

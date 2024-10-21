@@ -14,12 +14,44 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+<<<<<<< HEAD
+			auth: false
+=======
 			books : []
+>>>>>>> develop
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			signup: (email,password,name,lastName,gender,aboutMe) => {
+				
+				const requestOptions = {
+					method: 'POST',
+					headers: {'Content-Type' : 'application/json'}, 
+					body: JSON.stringify({
+						"email": email,
+						"password": password,
+						"nombre": name,
+						"apellido": lastName,
+						"genero": gender,
+						"acerca_de_mi": aboutMe
+					})
+				};
+				
+				fetch(`${process.env.BACKEND_URL}/api/critico`,requestOptions)
+					.then(response => {
+						console.log (response.status)
+						if (response.status == 200){
+							setStore( {auth : true});
+						}
+						return response.json()
+					})
+					.then(data => {
+						localStorage.setItem("token",data.access_token)
+						console.log(data)
+					});
 			},
 
 			getMessage: async () => {
