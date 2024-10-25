@@ -16,7 +16,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			auth: false,
 			books : [],
-			readers:[]
+			readers:[],
+			favorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -86,7 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const requestOptions = {
 					method: "POST",
 					headers: {"Content-Type": "application/json"},
-					body: JSON.stringify(email,password,name,lastName,suscriptionDate),
+					body: JSON.stringify({ email, password, name, lastName, suscriptionDate }),
 				  };
 				  
 				  fetch(`${process.env.BACKEND_URL}/api/signupLector`, requestOptions)
@@ -133,7 +134,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify(readerToEdit),
 				  };
 				  
-				  fetch(`${process.env.BACKEND_URL}admin/lector/`+idLectorToEdit, requestOptions)
+				  fetch(`${process.env.BACKEND_URL}/api/lector/` + idLectorToEdit, requestOptions)
+
 				  .then((response) => {
 					console.log(response)
 					if(response.ok){
@@ -269,10 +271,30 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
 
             logoutLector: () => {
-                localStorage.removeItem("token"); 
-                setStore({ auth: false }); 
-                console.log("Logged out");
-            },		
+				localStorage.removeItem("token");
+				setStore({ auth: false });
+				console.log("Logout successful");
+			},
+			toggleFavorite: (bookId) => {
+                const store = getStore();
+                const favorites = store.favorites;
+
+                
+                if (favorites.includes(bookId)) {
+                    
+                    const updatedFavorites = favorites.filter(id => id !== bookId);
+                    setStore({ favorites: updatedFavorites });
+                } else {
+                    
+                    const updatedFavorites = [...favorites, bookId];
+                    setStore({ favorites: updatedFavorites });
+                }
+            },	
+			getBookDetails: (id) => {
+				const bookDetails = 
+				setStore({ ...store, selectedBook: bookDetails });
+			},
+						
 		}
 	};
 };

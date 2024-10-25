@@ -1,0 +1,45 @@
+.container {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.heart-icon {
+    cursor: pointer;
+    font-size: 30px; /* Aumenta el tamaño */
+    color: gray; /* Color por defecto */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.heart-icon.favorite {
+    color: red; /* Color cuando es favorito */
+    transform: scale(1.2); /* Aumenta el tamaño del corazón */
+}
+
+.heart-icon:hover {
+    color: red; /* Color al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
