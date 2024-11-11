@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"; 
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
+import "../../styles/signup.css";
 
 const SignupLector = () => {
     const { store, actions } = useContext(Context);
@@ -28,60 +29,68 @@ const SignupLector = () => {
     }
 
     return (
-        <div>
-            <h1 className="w-50 mx-auto m-5">Register as a Reader</h1>
-            <form className="w-50 mx-auto" onSubmit={sendData}>
-                <div className="row g-3">
-                    <div className="col-md-4">
-                        <label htmlFor="inputName" className="form-label">Name</label>
-                        <input 
-                            value={name} 
-                            onChange={(e) => setName(e.target.value)} 
-                            type="text" 
-                            className="form-control" 
-                            id="inputName" 
-                        />
+        
+        <div className="container-fluid marco d-flex">
+            <div className="left w-50">
+                <form className="w-75 mx-auto" onSubmit={sendData}>
+                    <h1 className="d-block ">Register as a Reader</h1>
+                    <div className="row g-3 d-flex flex-column">
+                        <div className="col">
+                            <label htmlFor="inputName" className="form-label">Name</label>
+                            <input 
+                                value={name} 
+                                onChange={(e) => setName(e.target.value)} 
+                                type="text" 
+                                className="form-control" 
+                                id="inputName" 
+                                placeholder="Your Name"
+                            />
+                        </div>
+                        <div className="col">
+                            <label htmlFor="inputLastname" className="form-label">Last Name</label>
+                            <input 
+                                value={lastname} 
+                                onChange={(e) => setLastname(e.target.value)} 
+                                type="text" 
+                                className="form-control" 
+                                id="inputLastname" 
+                                placeholder="Your Last Name"
+                            />
+                        </div>
                     </div>
-                    <div className="col-md-4">
-                        <label htmlFor="inputLastname" className="form-label">Last Name</label>
-                        <input 
-                            value={lastname} 
-                            onChange={(e) => setLastname(e.target.value)} 
-                            type="text" 
-                            className="form-control" 
-                            id="inputLastname" 
-                        />
+                        <div className="col">
+                   
+                            <label htmlFor="exampleInputEmail2" className="form-label">Email address</label>
+                            <input 
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)} 
+                                type="email" 
+                                className="form-control" 
+                                id="exampleInputEmail2" 
+                                aria-describedby="emailHelp" 
+                                placeholder="email@example.com"
+                            />
+                      
+                        <div className="col">
+                            <label htmlFor="exampleInputPassword2" className="form-label">Password</label>
+                            <input 
+                                value={password} 
+                                onChange={(e) => setPassword(e.target.value)} 
+                                type="password" 
+                                className="form-control" 
+                                id="exampleInputPassword2" 
+                                placeholder="********"
+                            />
+                        </div>
                     </div>
-                    
-                </div>
-                <div className="row g-3">
-                    <div className="col-md-6">
-                        <label htmlFor="exampleInputEmail2" className="form-label">Email address</label>
-                        <input 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            type="email" 
-                            className="form-control" 
-                            id="exampleInputEmail2" 
-                            aria-describedby="emailHelp" 
-                        />
-                    </div>
-                    <div className="col-md-6">
-                        <label htmlFor="exampleInputPassword2" className="form-label">Password</label>
-                        <input 
-                            value={password} 
-                            onChange={(e) => setPassword(e.target.value)} 
-                            type="password" 
-                            className="form-control" 
-                            id="exampleInputPassword2" 
-                        />
-                    </div>
-                </div>
-                <button type="submit" className="btn btn-primary my-5 px-2" >Register</button>
-            </form>
-            <Link to="/">
-                <button className="btn btn-primary p-2">Back Booksy</button>
-            </Link>
+                    <button type="submit" className="w-100 btn btn-primary my-5 px-2" >Register</button>
+                </form>
+                <Link to="/">
+                    <button className="btn btn-primary p-2">Back Booksy</button>
+                </Link>
+            </div>
+            <div className="right">
+            </div>
         </div>
     );
 };

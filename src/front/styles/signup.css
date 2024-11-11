@@ -1,0 +1,30 @@
+.marco {
+    background: 
+                url("https://datacyl.com/wp-content/uploads/2024/02/escritorio-e1708694218127.jpg") top right no-repeat;
+    background-size: 50vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 93vh;
+    /* Para hacer scroll */
+    /* min-height: 3000px */
+    }
+    .left{
+    display: block;
+   
+    justify-content: center;
+    padding: 5vw 0px 20px;
+    }
+
+    .right{
+      display: flex;
+      margin: auto;
+    }
+
+    .form{
+    width: 100%;
+    position: relative;
+    }
+
+    input{
+      width: 100%;
+    }

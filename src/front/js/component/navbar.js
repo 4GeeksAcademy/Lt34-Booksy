@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
 
+
+
 export const Navbar = () => {
     const navigate = useNavigate();
     const { store, actions } = useContext(Context);
