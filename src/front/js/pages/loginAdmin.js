@@ -17,7 +17,7 @@ const LoginAdmin = () => {
             {store.auth ? (
                 <Navigate to='/addbook' /> 
             ) : (
-                <div className="row marcolog">
+                <div className="row">
                     <div className="col-6">
                             <h1 className="text-center">Log in Admin</h1>
                         <form className="w-75 m-auto vh-100" onSubmit={sendData}>

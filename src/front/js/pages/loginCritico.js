@@ -26,7 +26,10 @@ const LoginCritico = () => {
             {store.auth ? (
                 <Navigate to='/listaLibrosCritico' /> 
             ) : (
-                <form className="w-50 mx-auto" onSubmit={sendData}>
+                <div className="row">
+                <div className="col-6">
+                    <h1 className="text-center">Log in Critico</h1>
+                <form className="w-75 mx-auto" onSubmit={sendData}>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input 
@@ -36,6 +39,7 @@ const LoginCritico = () => {
                             className="form-control"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
+                            placeholder="example@mail.com"
                         />
                     </div>
                     <div className="mb-3">
@@ -46,10 +50,16 @@ const LoginCritico = () => {
                             type="password"
                             className="form-control"
                             id="exampleInputPassword1"
+                            placeholder="********"
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <button type="submit" className="w-100 btn btn-primary mt-4">Login</button>
                 </form>
+                </div>
+                <div className="col-6">
+                    <img className="w-100 vh-100" src="https://blog.bmv.com.mx/wp-content/uploads/2020/08/CALIFICADORAS.01.jpg" />
+                </div>
+                </div>
             )}
         </div>
     );
