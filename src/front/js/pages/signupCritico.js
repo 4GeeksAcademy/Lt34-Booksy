@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
+import "../../styles/signupCritico.css";
 
 const SignupCritico = () => {
     const { store, actions } = useContext(Context);
@@ -31,11 +32,12 @@ const SignupCritico = () => {
     }
 
     return (
-        <div>
+        <div className="row marco">
+            <div className="col-6">
             <h1 className="w-50 mx-auto m-5">Register as a Critic</h1>
-            <form className="w-50 mx-auto" onSubmit={sendData}>
-                <div className="row g-3">
-                    <div className="col-md-4">
+            <form className="w-75 mx-auto" onSubmit={sendData}>
+                <div className="row g-3 d-block">
+                    <div className="col">
                         <label htmlFor="inputName" className="form-label">Name</label>
                         <input 
                             value={name} 
@@ -43,9 +45,10 @@ const SignupCritico = () => {
                             type="text" 
                             className="form-control" 
                             id="inputName" 
+                            placeholder="Your Name"
                         />
                     </div>
-                    <div className="col-md-4">
+                    <div className="col">
                         <label htmlFor="inputLastName" className="form-label">Last Name</label>
                         <input 
                             value={lastName} 
@@ -53,9 +56,10 @@ const SignupCritico = () => {
                             type="text" 
                             className="form-control" 
                             id="inputLastName" 
+                            placeholder="Your Last Name"
                         />
                     </div>
-                    <div className="col-md-4">
+                    <div className="col">
                         <label htmlFor="inputGender" className="form-label">Gender</label>
                         <select 
                             value={gender} 
@@ -69,8 +73,8 @@ const SignupCritico = () => {
                         </select>
                     </div>
                 </div>
-                <div className="row g-3">
-                    <div className="col-md-6">
+                <div className="row g-3 d-block">
+                    <div className="col">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input 
                             value={email} 
@@ -79,9 +83,10 @@ const SignupCritico = () => {
                             className="form-control" 
                             id="exampleInputEmail1" 
                             aria-describedby="emailHelp" 
+                            placeholder="email@example.com"
                         />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col">
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                         <input 
                             value={password} 
@@ -89,9 +94,10 @@ const SignupCritico = () => {
                             type="password" 
                             className="form-control" 
                             id="exampleInputPassword1" 
+                            placeholder="********"
                         />
                     </div>
-                    <div className="mb-3">
+                    <div className="mb-1">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">About me</label>
                         <textarea 
                             value={aboutMe} 
@@ -103,11 +109,13 @@ const SignupCritico = () => {
                     </div>
                 </div>
                 
-                <button type="submit" className="btn btn-primary my-5">Register</button>
+                <button type="submit" className="w-100 btn btn-primary my-5">Register</button>
             </form>
             <Link to="/">
                 <button className="btn btn-primary">Back Booksy</button>
             </Link>
+            </div>
+            <div className="col-6"></div>
         </div>
     );
 };
