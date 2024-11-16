@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/wishlistLector.css"; 
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const WishlistLector = () => {
     const { store, actions } = useContext(Context);
@@ -15,6 +17,8 @@ export const WishlistLector = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <h1 className="mt-5">Lista de Deseos del Lector</h1>
             {store.books.length === 0 ? (
@@ -60,5 +64,7 @@ export const WishlistLector = () => {
                 </div>
             )}
         </div>
+        <Footer />
+        </>
     );
 };

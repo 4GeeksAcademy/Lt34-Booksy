@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { FaHeart, FaRegHeart, FaBookmark, FaRegBookmark } from 'react-icons/fa'; // Importando los íconos
 import "../../styles/bookDetail.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const BookDetail = () => {
     const { id } = useParams();
@@ -79,6 +81,8 @@ export const BookDetail = () => {
     }
 
     return (
+        <>
+        <Navbar />
         <div className="book-detail-container">
             <h1 className="mt-5">{book.titulo}</h1>
             <div className="book-detail-content">
@@ -123,5 +127,7 @@ export const BookDetail = () => {
                 )}
             </ul>
         </div>
+        <Footer />
+        </>
     );
 };

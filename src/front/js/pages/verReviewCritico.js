@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const CriticReviews = () => {
     const { store, actions } = useContext(Context);
@@ -48,6 +50,8 @@ export const CriticReviews = () => {
     };
     
     return (
+        <>
+        <Navbar />
         <div className="container">
             <h2>Mis Reseñas</h2>
             {editingReviewId ? ( 
@@ -94,6 +98,8 @@ export const CriticReviews = () => {
                 </span>
             </Link>
         </div>
+        <Footer />
+        </>
     );
 };
 

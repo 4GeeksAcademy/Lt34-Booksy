@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/listalibroscritico.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const ListaLibrosCritico = () => {
     const { store, actions } = useContext(Context);
@@ -51,6 +53,8 @@ export const ListaLibrosCritico = () => {
     };
 
     return (
+      <>
+        <Navbar />
       <div className="container page-container"> 
           <div className="row" style={{ width: '100%' }}> 
 
@@ -217,5 +221,7 @@ export const ListaLibrosCritico = () => {
                 <button className="btn btn-primary my-5">Back home</button>
             </Link>
         </div>
+        <Footer />
+        </>
     );
 };

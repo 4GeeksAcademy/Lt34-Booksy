@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const VisionAPI = () => {
   const [image, setImage] = useState(null);
@@ -72,6 +74,8 @@ const VisionAPI = () => {
   };
 
   return (
+    <>
+        <Navbar />
     <div className="container mt-5">
       <h1 className="text-center mb-4">BooksyQuest</h1>
       <p className="text-center mb-4">
@@ -107,6 +111,8 @@ const VisionAPI = () => {
         </div>
       )}
     </div>
+    <Footer />
+    </>
   );
 };
 

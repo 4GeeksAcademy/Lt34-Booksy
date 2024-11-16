@@ -8,7 +8,8 @@ import { faTrash as trashIcon } from '@fortawesome/free-solid-svg-icons';
 import "../../styles/readersListOfBooks.css";
 import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons'; 
 import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons'; 
-
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const ReadersListOfBooks = () => {
     const { store, actions } = useContext(Context);
@@ -84,9 +85,9 @@ export const ReadersListOfBooks = () => {
     };
 
     return (
-        <>
+    <>
 
-        
+       <Navbar />
        <div className="container page-container">
         <div className="row" style={{ width: '100%' }}>
             
@@ -352,7 +353,7 @@ export const ReadersListOfBooks = () => {
           </div>
         </div>
         </div>
-
-                </>
+        <Footer />
+    </>
     );
 };

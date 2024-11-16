@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 import "../../styles/home.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const AutorDetail = () => {
     const { store, actions } = useContext(Context);
@@ -15,6 +17,7 @@ const AutorDetail = () => {
     // console.log(docs)
     return (
         <div>
+            <Navbar />
             <div className="container">
                 <h1 className="m-5">Autor</h1>
                 <div className="row g-3">
@@ -28,6 +31,7 @@ const AutorDetail = () => {
                         ):null}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

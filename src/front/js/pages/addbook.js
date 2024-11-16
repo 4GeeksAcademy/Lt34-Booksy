@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../../styles/addbook.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const AddBook = () => {
     const { store, actions } = useContext(Context);
@@ -69,6 +71,8 @@ const AddBook = () => {
     }
 
     return (
+        <>
+        <Navbar />
         <div className="container mt-5 card-addbook">
             <div className="card card-bleed shadow-light-lg mb-6 ">
                 <div className="card-header">
@@ -257,6 +261,8 @@ const AddBook = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 

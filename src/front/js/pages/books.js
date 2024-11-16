@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/addbook.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const Books = () => {
     const { store, actions } = useContext(Context);
@@ -16,6 +18,8 @@ export const Books = () => {
     );
 
     return (
+        <>
+        <Navbar />
         <div className="container mt-5 card-addbook">
             <div className="card card-bleed shadow-light-lg mb-6">
                 <div className="card-header">
@@ -85,5 +89,7 @@ export const Books = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };

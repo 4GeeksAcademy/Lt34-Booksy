@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { Navbar } from "../component/navbar";
 import { Context } from "../store/appContext";
+import { Footer } from "../component/footer";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
+		<>
+        <Navbar />
 		<div className="container">
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
@@ -37,5 +40,7 @@ export const Demo = () => {
 				<button className="btn btn-primary">Back home</button>
 			</Link>
 		</div>
+		<Footer />
+		</>
 	);
 };

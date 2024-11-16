@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { useParams, useNavigate } from "react-router-dom";
 import "../../styles/addbook.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const EditBook = () => {
     const { store, actions } = useContext(Context);
@@ -35,6 +37,8 @@ const EditBook = () => {
     if (!book) return <div>Cargando...</div>;
 
     return (
+        <>
+        <Navbar />
         <div className="container mt-5 card-addbook">
             <div className="card card-bleed shadow-light-lg mb-6">
                 <div className="card-header">
@@ -135,6 +139,8 @@ const EditBook = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 

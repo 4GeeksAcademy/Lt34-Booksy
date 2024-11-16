@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const ProfileLector = () => {
     const { store, actions } = useContext(Context);
@@ -62,6 +64,8 @@ const ProfileLector = () => {
     }, [store.lector]); 
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <h1 className="my-5">Lector Profile</h1>
             <div>
@@ -85,6 +89,8 @@ const ProfileLector = () => {
                 <button className="btn btn-primary my-5">Back to Booksy</button>
             </Link>
         </div>
+        <Footer />
+        </>
     );
 };
 

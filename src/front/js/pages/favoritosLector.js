@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/favoritosLector.css"; 
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const FavoritosLector = () => {
     const { store, actions } = useContext(Context);
@@ -16,6 +18,8 @@ export const FavoritosLector = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <h1 className="mt-5">Favoritos del Lector</h1>
             {store.books.length === 0 ? (
@@ -59,5 +63,7 @@ export const FavoritosLector = () => {
                 </div>
             )}
         </div>
+        <Footer />
+        </>
     );
 };

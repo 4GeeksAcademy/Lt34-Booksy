@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/chat.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const Chat = () => {
     const { store, actions } = useContext(Context);
@@ -150,6 +152,8 @@ export const Chat = () => {
     }
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <div className="row clearfix">
                 <div className="col-lg-12">
@@ -243,6 +247,8 @@ export const Chat = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 

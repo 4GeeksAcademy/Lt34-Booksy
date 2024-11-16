@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const ProfileCritico = () => {
     const { store, actions } = useContext(Context);
@@ -63,6 +65,8 @@ const ProfileCritico = () => {
  
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <h1 className="my-5">Critic Profile</h1>
             <div>
@@ -91,6 +95,8 @@ const ProfileCritico = () => {
                 </span>
             </Link>
         </div>
+        <Footer />
+        </>
     );
 };
 

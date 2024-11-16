@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/bookDetailsCritic.css";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 export const BookDetailsCritic = () => {
     const { store, actions } = useContext(Context);
@@ -105,6 +107,8 @@ export const BookDetailsCritic = () => {
     if (!bookData) return <p>Cargando detalles del libro...</p>;
 
     return (
+        <>
+        <Navbar />
         <div className="book-detail-container">
             <h1 className="mt-5">{bookData.titulo}</h1>
             <div className="book-detail-content">
@@ -185,5 +189,7 @@ export const BookDetailsCritic = () => {
                 </span>
             </Link>
         </div>
+        <Footer />
+        </>
     );
 };

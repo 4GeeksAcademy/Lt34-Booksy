@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const Lector = () => {
 
@@ -31,6 +33,7 @@ const Lector = () => {
 
     return (
         <div>
+            <Navbar />
             <h1 className="w-50 mx-auto m-5">Edit Reader</h1>
             <form className="w-50 mx-auto">
                 <div className="row g-3">
@@ -84,6 +87,7 @@ const Lector = () => {
             <Link to="/">
                 <button className="btn btn-primary">Back Booksy</button>
             </Link>
+            <Footer />
         </div>
     );
 };

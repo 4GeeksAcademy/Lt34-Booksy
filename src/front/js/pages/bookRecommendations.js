@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
 
 const BookRecommendations = () => {
     const { store, actions } = useContext(Context);
@@ -14,6 +16,8 @@ const BookRecommendations = () => {
     }, []); 
 
     return (
+        <>
+        <Navbar />
         <div className="d-flex flex-column justify-content-start align-items-center vh-100 bg-light">
             <div className="text-center" style={{ maxWidth: '800px', margin: '20px auto' }}>
                 <h1 className="display-4 mb-3 text-primary">Recomendación de Booksy</h1>
@@ -38,6 +42,8 @@ const BookRecommendations = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 
