@@ -65,6 +65,7 @@ const SignupLector = () => {
                                     type="text"
                                     className="form-control"
                                     id="inputName"
+                                    placeholder="Enter your Name"
                                 />
                             </div>
                             <div className="col">
@@ -75,6 +76,7 @@ const SignupLector = () => {
                                     type="text"
                                     className="form-control"
                                     id="inputLastname"
+                                    placeholder="Enter your Last Name"
                                 />
                             </div>
                         </div>
@@ -89,6 +91,7 @@ const SignupLector = () => {
                                     className="form-control"
                                     id="exampleInputEmail2"
                                     aria-describedby="emailHelp"
+                                    placeholder="name@address.com"
                                 />
                             </div>
                         </div>
@@ -102,6 +105,7 @@ const SignupLector = () => {
                                         type="password"
                                         className="form-control"
                                         id="exampleInputPassword2"
+                                        placeholder="Enter your password"
                                     />
                                 </div>
                                 <div className="col">
@@ -112,6 +116,7 @@ const SignupLector = () => {
                                         type="password"
                                         className="form-control"
                                         id="confirmPassword"
+                                        placeholder="Confirm your password"
                                     />
                                 </div>
                         </div>
@@ -124,7 +129,14 @@ const SignupLector = () => {
                     </Link> */}
                 </div>
                 <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
-
+                        {/* Image */}
+                        <div className="h-100 w-cover bg-cover" style={{backgroundImage: `url("https://landkit.goodthemes.co/assets/img/covers/cover-14.jpg")`}}></div>
+                        {/* Shape */}
+                        <div className="shape shape-start shape-fluid-y text-white">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor"></path>
+                            </svg>
+                        </div>
                 </div>
             </div>
         </div>
