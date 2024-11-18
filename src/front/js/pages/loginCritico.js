@@ -26,30 +26,55 @@ const LoginCritico = () => {
             {store.auth ? (
                 <Navigate to='/listaLibrosCritico' /> 
             ) : (
-                <form className="w-50 mx-auto" onSubmit={sendData}>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                        <input 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            type="email"
-                            className="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                        />
+                <section className="container-fluid d-block vh-100 p-0">
+                    <div className="container d-flex flex-column">
+                        <div className="row align-items-center justify-content-center gx-0 min-vh-100" >
+                            <div className="col-12 col-md-6 col-lg-4 py-8 py-md-11">
+                                {/* Heading */}
+                                <h1 className="mb-0 fw-bold mt-5">Log in Critic</h1>
+                                {/* Text */}
+                                <p className="mb-6 text-body-secondary">Give us your best feedback</p>
+                                {/* Form */}
+                                <form className="mx-auto" onSubmit={sendData}>
+                                    <div className="mb-3">
+                                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                                        <input 
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            type="email"
+                                            className="form-control"
+                                            id="exampleInputEmail1"
+                                            aria-describedby="emailHelp"
+                                            placeholder="name@address.com"
+                                        />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                                        <input
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            type="password"
+                                            className="form-control"
+                                            id="exampleInputPassword1"
+                                            placeholder="Enter your password"
+                                        />
+                                    </div>
+                                    <button type="submit" className="btn btn-primary w-100">Login</button>
+                                </form>
+                            </div>
+                            <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
+                                {/* Image */}
+                                <div className="h-100 w-cover bg-cover" style={{backgroundImage: `url("https://landkit.goodthemes.co/assets/img/covers/cover-14.jpg")`}}></div>
+                                {/* Shape */}
+                                <div className="shape shape-start shape-fluid-y text-white">
+                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            type="password"
-                            className="form-control"
-                            id="exampleInputPassword1"
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
-                </form>
+                </section>
             )}
         </div>
     );
