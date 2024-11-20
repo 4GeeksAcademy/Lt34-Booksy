@@ -1,0 +1,35 @@
+.derecha{
+position: relative;
+background-image: url(https://landkit.goodthemes.co/assets/img/covers/cover-14.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+}
+
+.shape{
+position: absolute;
+pointer-events: none;
+top: 0%;    
+height: 100%;
+}
+
+.shape-start {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.shape:not([class*=shape-blur]) {
+    overflow: hidden;
+}
+.triangle {
+    width: 20%;
+    height: 100%;
+    background-image:
+      linear-gradient(to bottom right, white 0, transparent 50%),
+      linear-gradient(to top right, transparent 0, transparent 100%);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+  }

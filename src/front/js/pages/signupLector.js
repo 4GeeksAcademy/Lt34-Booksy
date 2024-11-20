@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
 import { relative } from "@cloudinary/url-gen/qualifiers/flag";
-import "../../styles/signupLector.css";
+import "../../styles/signup.css";
 
 const SignupLector = () => {
     const { store, actions } = useContext(Context);

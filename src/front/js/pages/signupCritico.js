@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
+import "../../styles/signup.css";
 
 const SignupCritico = () => {
     const { store, actions } = useContext(Context);
@@ -143,23 +144,21 @@ const SignupCritico = () => {
                             </div>
                             {error && <div className="text-danger my-2">{error}</div>}
                              {/* Submit*/}
-                            <button type="submit" className="btn btn-primary my-5">Register</button>
+                            <button type="submit" className="btn btn-primary my-5 w-100">Register</button>
                         </form>
                         {/* <Link to="/">
                             <button className="btn btn-primary">Back Booksy</button>
                         </Link> */}
-                        </div>
-                        <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
-                            {/* Image */}
-                            <div className="h-100 w-cover bg-cover" style={{backgroundImage: `url("https://landkit.goodthemes.co/assets/img/covers/cover-14.jpg")`}}></div>
-                            {/* Shape */}
-                            <div className="shape shape-start shape-fluid-y text-white">
-                                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </div>
                     </div>
+                    <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block derecha">
+                            {/* Image */}
+                            <div className="h-100 w-cover bg-cover"></div>
+                            {/* Shape */}
+                            <div className="shape shape-start shape-fluid-y text-white triangle">
+    
+                            </div>
+                    </div>
+                </div>
 
             </div>
         </section>
