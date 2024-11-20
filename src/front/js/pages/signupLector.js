@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
+import { relative } from "@cloudinary/url-gen/qualifiers/flag";
+import "../../styles/signupLector.css";
 
 const SignupLector = () => {
     const { store, actions } = useContext(Context);
@@ -128,14 +130,12 @@ const SignupLector = () => {
                         <button className="btn btn-primary p-2">Back Booksy</button>
                     </Link> */}
                 </div>
-                <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
+                <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block derecha">
                         {/* Image */}
-                        <div className="h-100 w-cover bg-cover" style={{backgroundImage: `url("https://landkit.goodthemes.co/assets/img/covers/cover-14.jpg")`}}></div>
+                        <div className="h-100 w-cover bg-cover"></div>
                         {/* Shape */}
-                        <div className="shape shape-start shape-fluid-y text-white">
-                            <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor"></path>
-                            </svg>
+                        <div className="shape shape-start shape-fluid-y text-white triangle">
+                          
                         </div>
                 </div>
             </div>
