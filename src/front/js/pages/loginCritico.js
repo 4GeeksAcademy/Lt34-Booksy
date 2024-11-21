@@ -60,7 +60,7 @@ const LoginCritico = () => {
                                             placeholder="Enter your password"
                                         />
                                     </div>
-                                    <button type="submit" className="btn btn-primary w-100">Login</button>
+                                    <button type="submit" className="btn btn-primary w-100 mt-3">Login</button>
                                 </form>
                             </div>
                             <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block derecha">

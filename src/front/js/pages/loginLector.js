@@ -74,7 +74,7 @@ export const LoginLector = () => {
                                     />
                                 </div>
                                 {/* <input type="submit" className="my-form__button" value="Login" /> */}
-                                <button type="submit" className="btn btn-primary w-100 mb-3">Login</button>
+                                <button type="submit" className="btn btn-primary w-100 mb-3 mt-3">Login</button>
                                 <div className="my-form__actions">
                                     <div className="my-form__signup">
                                         <Link to="/signupLector" title="Create Account">Eres nuevo? Crea una cuenta</Link>
